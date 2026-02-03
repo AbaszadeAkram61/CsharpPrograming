@@ -4,9 +4,60 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 internal class Program
 {
 
-
-    public static void Main()
+  
+    public static void Main8()
     {
+        //Write a C# program to find prime numbers up to users entered value.
+        //Exmpl: input - 100, Result: 2, 3, 5, 7, 11, 13... 89, 97
+
+        Console.Write("Please enter value");
+        int Input = int.Parse(Console.ReadLine());
+
+        for (int i = 2; i <= Input; i++) 
+        {
+            bool sade = true; 
+
+            for (int j = 2; j <= Math.Sqrt(i); j++) 
+            {
+                if (i % j == 0) 
+                {
+                    sade = false; 
+                    break;       
+                }
+            }
+
+            if (sade) 
+            {
+                Console.Write(i + " "); 
+            }
+        }
+
+    }
+
+    public static void Main7()
+    {
+        //Write a program in C# to display the sum of the series [ 9 + 99 + 999 + 9999 ...]. Test Data :
+        //Input the number or terms :5
+        //Expected Output :
+        //9 99 999 9999 99999
+        //The sum of the series = 111105
+
+        Console.Write("Rəqəm və ya şərtləri daxil edin: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int num = 0;
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            num = num * 10 + 9;  
+            Console.Write(num + " ");
+            sum += num;
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Seriyanın cəmi = " + sum);
+
 
     }
     public static void Main6()
