@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main1(string[] args)
     {
         Shape[] shapes = new Shape[4];
 
